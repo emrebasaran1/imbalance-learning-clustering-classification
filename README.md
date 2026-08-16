@@ -1,6 +1,6 @@
-# Imbalance Learning: Clustering-Guided Oversampling for KNN Classification
+# Imbalance Learning: Comparing Oversampling Strategies for KNN Classification
 
-A from-scratch (no ML-classifier libraries) study of imbalanced binary classification: five KNN-family classifiers are evaluated on ten imbalanced datasets, comparing standard oversampling (SMOTE, G-SMOTE) against a clustering-guided oversampling strategy applied before SMOTE/G-SMOTE generation.
+A from-scratch (no ML-classifier libraries) study of imbalanced binary classification. Five KNN-family classifiers are evaluated on ten imbalanced datasets under five training-set strategies: No Oversampling as a baseline, standard SMOTE and G-SMOTE, and two clustering-guided variants (Cluster+SMOTE, Cluster+G-SMOTE) where the minority class is first split into clusters and the synthetic-point generation rule is changed per cluster before SMOTE/G-SMOTE runs inside each one. The question the project asks is twofold: how much does oversampling help over doing nothing at all, and how much further does changing the generation rule through clustering move that effect.
 
 ## What is imbalance learning?
 
@@ -8,7 +8,7 @@ Imbalance learning (or imbalanced learning) is the part of machine learning conc
 
 ## Overview
 
-Standard classifiers tend to favor the majority class when class sizes are unequal, and distance-based classifiers such as KNN are particularly sensitive to this because majority points can dominate a query point's neighborhood. This project studies how much oversampling helps, and whether adding a clustering step before oversampling helps further, across ten imbalanced datasets.
+Standard classifiers tend to favor the majority class when class sizes are unequal, and distance-based classifiers such as KNN are particularly sensitive to this because majority points can dominate a query point's neighborhood. This project measures that effect directly by holding the classifiers, folds, and hyperparameters fixed and varying only how the training set is built: not oversampling at all, oversampling with SMOTE or G-SMOTE, and oversampling with SMOTE or G-SMOTE guided by clustering. Comparing all five side by side across ten imbalanced datasets is what isolates what oversampling itself contributes, and what clustering-guided generation contributes on top of it.
 
 The study runs in two phases:
 
