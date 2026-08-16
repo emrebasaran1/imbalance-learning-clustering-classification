@@ -42,11 +42,17 @@ All ten datasets are binary-classification versions of well-known UCI (and one K
 | Pima | Kaggle / UCI, Pima Indians Diabetes | 768 | 8 | 500 / 268 | 1.87x |
 | Yeast | UCI ML Repository, ID 110 | 1484 | 8 | 163 / 1321 | 8.1x |
 
+## Report
+
+[`docs/report.pdf`](docs/report.pdf) is the full project report: it explains the methodology in detail and documents the actual results, including per-dataset breakdowns for both phases (Appendix A and B) that are only summarized in this README.
+
 ## Project structure
 
 ```
 .
 ├── data/            # 10 datasets, each an .xlsx with a Description sheet + data sheet
+├── docs/
+│   └── report.pdf    # full project report: methodology, formulas, and detailed results
 ├── src/
 │   └── main.py       # full pipeline: data loading, classifiers, SMOTE/G-SMOTE, clustering, Phase 1 & 2 runners
 ├── requirements.txt
@@ -64,4 +70,4 @@ python src/main.py
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
