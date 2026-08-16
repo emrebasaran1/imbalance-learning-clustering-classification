@@ -1,4 +1,4 @@
-# Imbalance Learning: KNN Classification with Clustering-Guided Oversampling
+# Imbalance Learning: Clustering-Guided Oversampling for KNN Classification
 
 A from-scratch (no ML-classifier libraries) study of imbalanced binary classification: five KNN-family classifiers are evaluated on ten imbalanced datasets, comparing standard oversampling (SMOTE, G-SMOTE) against a clustering-guided oversampling strategy applied before SMOTE/G-SMOTE generation.
 
