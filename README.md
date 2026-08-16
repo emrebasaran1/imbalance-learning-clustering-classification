@@ -1,6 +1,10 @@
-# Imbalance Learning: Clustering and Classification
+# Imbalance Learning: KNN Classification with Clustering-Guided Oversampling
 
-A from-scratch (no ML-classifier libraries) study of imbalanced binary classification with five KNN-family classifiers, comparing standard oversampling (SMOTE, G-SMOTE) against a clustering-guided oversampling strategy applied before SMOTE/G-SMOTE generation.
+A from-scratch (no ML-classifier libraries) study of imbalanced binary classification: five KNN-family classifiers are evaluated on ten imbalanced datasets, comparing standard oversampling (SMOTE, G-SMOTE) against a clustering-guided oversampling strategy applied before SMOTE/G-SMOTE generation.
+
+## What is imbalance learning?
+
+Imbalance learning (or imbalanced learning) is the part of machine learning concerned with classification problems where one class has far more examples than the other, for instance fraud detection, disease diagnosis, or fault detection, where the case that matters most is also the rarest one. Standard classifiers are trained to maximize overall accuracy, so on an imbalanced dataset they can reach a high accuracy simply by predicting the majority class almost every time, while barely learning to recognize the minority class at all. This project deals with that problem in two ways: by oversampling, generating synthetic minority-class examples so the classifier sees a more balanced training set, and by evaluating with metrics (Geometric Mean, F1 score) that stay meaningful even when the classes are imbalanced, instead of relying on accuracy or error rate alone.
 
 ## Overview
 
